@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: ./container/Node
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./typescript:/app
+    ports:
+      - "3000:3000"
